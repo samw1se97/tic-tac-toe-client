@@ -1,0 +1,10 @@
+.box {
+  background-color: #c9f9fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box > img {
+  width: 70%;
+}
