@@ -12,7 +12,10 @@
         color: #ffffff;
 }
 
-.main > .devider_line{
+.main  .devider_line{
     width: 100%;
+    margin: 4rem 0;
+    position: relative;
     border: 2px solid #ffffff86;
+    text-align: center;
 }

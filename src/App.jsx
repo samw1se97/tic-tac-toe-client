@@ -6,6 +6,7 @@ import Board from './components/Board';
 import { GameContext } from './context/GameContext';
 import GamePage from './pages/GamePage';
 import JoinGamePage from './pages/JoinGamePage';
+import WaitingPage from './pages/WaitingPage';
 
 function App() {
   const [currPlayer, setCurrPlayer] = useState('X');
@@ -15,7 +16,8 @@ function App() {
     <>
       <GameContext.Provider value={{ currPlayer, setCurrPlayer }}>
         {/* <GamePage /> */}
-        <JoinGamePage />
+        {/* <JoinGamePage /> */}
+        <WaitingPage />
       </GameContext.Provider>
     </>
   );

@@ -30,7 +30,7 @@ button {
 
 input {
   border: 2px solid var(--border-color);
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   padding: 1.5rem;
   width: 100%;
   font-size: 1.5rem;
@@ -45,7 +45,7 @@ input {
 .btn{
       border-radius: 1.5rem;
     padding: .6rem 1rem;
-        margin: 3rem;
+        margin: 2rem;
 }
 .return_btn {
   padding: 0.3rem;
@@ -65,11 +65,13 @@ input {
     -webkit-text-stroke-color: #121212;
 }
 .devider{
-      font-size: 2.7rem;
-      translate: 0% -50%;
+    display: inline-block;
+    position: absolute;
+    font-size: 2.7rem;
+    translate: -50% -50%;
     padding: 0rem 1rem;
     background-color: var(--main-bg-color);
-        -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #121212;
 }
 
