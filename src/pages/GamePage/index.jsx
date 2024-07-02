@@ -1,7 +1,13 @@
 import React from 'react';
+import styles from './styles.module.css';
+import Board from '../../components/Board';
 
 function GamePage() {
-  return <div>GamePage</div>;
+  return (
+    <div>
+      <Board />
+    </div>
+  );
 }
 
 export default GamePage;

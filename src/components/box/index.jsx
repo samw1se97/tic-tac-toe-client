@@ -3,30 +3,25 @@ import styles from './styles.module.css';
 import { useContext } from 'react';
 import { GameContext } from '../../context/GameContext';
 
-function Box({ i, j, choises, setChoises }) {
-  const { currPlayer, setCurrPlayer } = useContext(GameContext);
-  const [isClicked, setIsClicked] = useState('');
-
-  // console.log(ansArray);
-  const handleClick = () => {
-    console.log(`${currPlayer} turn`);
-    if (isClicked) {
-      console.log(`${index} is already clicked`);
-    } else {
-      setIsClicked(currPlayer);
-      let cloneMatrix = [...choises];
-      cloneMatrix[i][j] = currPlayer;
-      setChoises([...cloneMatrix]);
-
-      // changing players
-      currPlayer === 'X' ? setCurrPlayer('O') : setCurrPlayer('X');
-    }
-  };
+function Box({ handleBoxClick, index, player, winner }) {
+  // let winnerStyles;
+  // if (winner) {
+  //   winnerStyles = { width: '80%' };
+  // }
+  // };
   return (
-    <div className={styles.box} onClick={handleClick}>
-      {isClicked && <img src={`${isClicked}.png`} alt='' />}
+    <div className={styles.box} onClick={() => handleBoxClick(index)}>
+      {player && (
+        <img
+          src={player ? `${player}.png` : null}
+          alt=''
+          style={winner && winner.includes(index) ? { width: '80%' } : null}
+        />
+      )}
     </div>
   );
 }
+
+
 
 export default Box;

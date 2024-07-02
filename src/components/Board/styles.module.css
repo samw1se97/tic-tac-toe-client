@@ -1,8 +1,10 @@
 .board {
   background-color: #ffffff;
   display: grid;
-  grid-template-columns: 32% 32% 32%;
-  width: 400px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 400px;max-width: 100%;
+  aspect-ratio: 1/1;
   height: 400px;
   gap: 0.5rem;
   padding: 1rem;

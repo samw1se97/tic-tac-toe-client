@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg';
 import './App.css';
 import Board from './components/Board';
 import { GameContext } from './context/GameContext';
+import GamePage from './pages/GamePage';
 
 function App() {
   const [currPlayer, setCurrPlayer] = useState('X');
@@ -12,7 +13,7 @@ function App() {
   return (
     <>
       <GameContext.Provider value={{ currPlayer, setCurrPlayer }}>
-        <Board />
+        <GamePage />
       </GameContext.Provider>
     </>
   );
