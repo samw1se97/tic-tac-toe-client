@@ -5,6 +5,7 @@ import './App.css';
 import Board from './components/Board';
 import { GameContext } from './context/GameContext';
 import GamePage from './pages/GamePage';
+import JoinGamePage from './pages/JoinGamePage';
 
 function App() {
   const [currPlayer, setCurrPlayer] = useState('X');
@@ -13,7 +14,8 @@ function App() {
   return (
     <>
       <GameContext.Provider value={{ currPlayer, setCurrPlayer }}>
-        <GamePage />
+        {/* <GamePage /> */}
+        <JoinGamePage />
       </GameContext.Provider>
     </>
   );

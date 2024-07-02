@@ -4,11 +4,6 @@ import { useContext } from 'react';
 import { GameContext } from '../../context/GameContext';
 
 function Box({ handleBoxClick, index, player, winner }) {
-  // let winnerStyles;
-  // if (winner) {
-  //   winnerStyles = { width: '80%' };
-  // }
-  // };
   return (
     <div className={styles.box} onClick={() => handleBoxClick(index)}>
       {player && (

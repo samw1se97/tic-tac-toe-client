@@ -10,6 +10,8 @@ import {
 
 function Board() {
   const [boxes, setBoxes] = useState(Array(9).fill(null));
+  let winner;
+  let status;
   const { currPlayer, setCurrPlayer } = useContext(GameContext);
   const [choises, setChoises] = useState([
     [, , ,],
@@ -19,7 +21,16 @@ function Board() {
   // console.log(boxes);
 
   useEffect(() => {
-    console.log(boxes);
+    // console.log(boxes);
+    console.log(currPlayer);
+
+    // winner = calculateWinner(boxes);
+    // if (winner) {
+    //   console.log(winner);
+    //   status = `${boxes.at(winner[0])} won the game!`;
+    // } else {
+    //   status = `${currPlayer}'s turn `;
+    // }
   }, [boxes]);
 
   const handleBoxClick = (i) => {
@@ -30,13 +41,14 @@ function Board() {
     currPlayer === 'X' ? setCurrPlayer('O') : setCurrPlayer('X'); // switching player
   };
 
-  const winner = calculateWinner(boxes);
-  let status;
+  winner = calculateWinner(boxes);
   if (winner) {
+    console.log(winner);
     status = `${boxes.at(winner[0])} won the game!`;
   } else {
     status = `${currPlayer}'s turn `;
   }
+
 
   return (
     <>
