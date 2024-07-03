@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.css';
-import { Audio, ThreeCircles, RotatingLines } from 'react-loader-spinner';
+import { RotatingLines } from 'react-loader-spinner';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import Title from '../../components/Title';

@@ -1,6 +1,7 @@
 :root {
   --main-bg-color: #3d7ad6;
   --border-color: #000000;
+  --grey-txt-color: #c5c5c5;
   --main-border-ylw: #fcd015;
   --secondary-border-ylw: #fbb500;
 }
@@ -47,6 +48,7 @@ input {
     padding: .6rem 1rem;
         margin: 2rem;
 }
+
 .return_btn {
   padding: 0.3rem;
   border-radius: 0.5rem;
